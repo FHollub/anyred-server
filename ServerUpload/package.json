@@ -1,42 +1,11 @@
 {
-  "name": "anyred",
-  "version": "1.0.0",
-  "description": "Aplicación de acceso y control remoto portable y segura estilo AnyDesk",
-  "main": "main.js",
+  "name": "anyred-server",
   "scripts": {
-    "start": "electron .",
-    "server": "node server/signaling.js",
-    "dev": "node server/signaling.js & electron .",
-    "dist": "electron-builder --win portable"
+    "start": "node signaling.js"
   },
-  "keywords": [
-    "remote-desktop",
-    "anydesk",
-    "webrtc",
-    "portable"
-  ],
-  "author": "FHoll",
-  "license": "MIT",
   "dependencies": {
-    "@nut-tree-fork/nut-js": "^4.1.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "peerjs": "^1.5.5",
-    "socket.io": "^4.8.1",
-    "socket.io-client": "^4.8.1",
-    "uuid": "^11.1.0",
-    "ws": "^8.18.0"
-  },
-  "devDependencies": {
-    "electron": "^35.0.0",
-    "electron-builder": "^25.1.8"
-  },
-  "build": {
-    "appId": "com.anyred.remote",
-    "productName": "AnyRed",
-    "win": {
-      "target": "portable"
-    }
+    "socket.io": "^4.8.1"
   }
 }
